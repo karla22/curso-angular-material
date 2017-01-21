@@ -5,4 +5,10 @@
   <md-input-container>
     <input md-input placeholder="name">
   </md-input-container>
+  <md-input-container>
+    <input #name md-input placeholder="name" maxlength="10">
+    <md-hint align="end">
+      {{name.value.length}}/10
+    </md-hint>
+  </md-input-container>
 </form>
