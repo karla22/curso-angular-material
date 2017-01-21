@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
+import { TestControlsComponent } from './test-controls/test-controls.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestControlsComponent
   ],
   imports: [
     BrowserModule,
