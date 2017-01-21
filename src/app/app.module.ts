@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import { TestControlsComponent } from './test-controls/test-controls.component';
+import { TestRadioComponent } from './test-radio/test-radio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestControlsComponent
+    TestControlsComponent,
+    TestRadioComponent
   ],
   imports: [
     BrowserModule,

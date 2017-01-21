@@ -1,0 +1,8 @@
+<md-radio-group [(ngModel)]="estacionFavorita" >
+  <md-radio-button *ngFor="let estacion of estaciones" 
+  [value]="estacion">
+    {{estacion}}
+  </md-radio-button>
+</md-radio-group>
+
+Mi estacion favorita es: {{estacionFavorita}}
