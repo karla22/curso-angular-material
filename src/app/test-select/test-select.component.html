@@ -1,0 +1,10 @@
+<form>
+  <md-select [(ngModel)]="diaSeleccionado" name="dia">
+    <md-option *ngFor="let dia of dias" [value]="dia.valor">
+      {{dia.valor}}
+    </md-option>
+  </md-select>
+  <p>
+    Dia Favorito: {{diaSeleccionado}}
+  </p>
+</form>

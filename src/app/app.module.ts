@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import { TestControlsComponent } from './test-controls/test-controls.component';
 import { TestRadioComponent } from './test-radio/test-radio.component';
+import { TestSelectComponent } from './test-select/test-select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestControlsComponent,
-    TestRadioComponent
+    TestRadioComponent,
+    TestSelectComponent
   ],
   imports: [
     BrowserModule,
