@@ -8,13 +8,17 @@ import { MaterialModule } from '@angular/material';
 import { TestControlsComponent } from './test-controls/test-controls.component';
 import { TestRadioComponent } from './test-radio/test-radio.component';
 import { TestSelectComponent } from './test-select/test-select.component';
+import { ClickComponentComponent } from './click-component/click-component.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestControlsComponent,
     TestRadioComponent,
-    TestSelectComponent
+    TestSelectComponent,
+    ClickComponentComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
