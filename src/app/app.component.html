@@ -3,10 +3,42 @@
     <md-icon>menu</md-icon>
   </button>
   Angular Material Example
+  <button md-fab (click)="showForm = !showForm">
+    <md-icon>add</md-icon>
+  </button>
 </md-toolbar>
+<div *ngIf="showForm">
+    <md-card>
+      <md-card-title>Register a Blogger</md-card-title>
+      <md-card-content>
+        <form>
+          <md-input placeholder="Name"></md-input>
+          <md-input placeholder="Username"></md-input>
+          <md-input placeholder="Email"></md-input>
+          <md-input placeholder="Profile Picture URL"></md-input>
+          <md-radio-group>
+            <md-radio-button value="male">Male</md-radio-button>
+            <md-radio-button value="female">Female</md-radio-button>
+          </md-radio-group>
+          <div>
+            <md-checkbox>Technology</md-checkbox>
+            <md-checkbox>Science</md-checkbox>
+          </div>
+        </form>
+      </md-card-content>
+      <md-card-actions>
+        <button md-raised-button color="accent">Add</button>
+      </md-card-actions>
+    </md-card>
+</div>
 
-<app-test-controls></app-test-controls>
+
+
+
+
+
+<!--<app-test-controls></app-test-controls>
 <app-test-radio></app-test-radio>
 <app-test-select></app-test-select>
 <app-click-component></app-click-component>
-<app-event></app-event>
+<app-event></app-event>-->
