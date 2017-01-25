@@ -11,11 +11,11 @@
     <md-card>
       <md-card-title>Register a Blogger</md-card-title>
       <md-card-content>
-        <form>
-          <md-input placeholder="Name"></md-input>
-          <md-input placeholder="Username"></md-input>
-          <md-input placeholder="Email"></md-input>
-          <md-input placeholder="Profile Picture URL"></md-input>
+        <form name="bloggerForm">
+          <md-input [(ngModel)]="blogger.name" name="name" placeholder="Name"></md-input>
+          <md-input [(ngModel)]="blogger.username" name="blogger" placeholder="Username"></md-input>
+          <md-input [(ngModel)]="blogger.email" name="email" placeholder="Email"></md-input>
+          <md-input [(ngModel)]="blogger.profilePicture" name="profilePicture" placeholder="Profile Picture URL"></md-input>
           <md-radio-group>
             <md-radio-button value="male">Male</md-radio-button>
             <md-radio-button value="female">Female</md-radio-button>
@@ -27,12 +27,17 @@
         </form>
       </md-card-content>
       <md-card-actions>
-        <button md-raised-button color="accent">Add</button>
+        <button md-raised-button (click)="addBlogger(blogger)" color="accent">Add</button>
       </md-card-actions>
     </md-card>
 </div>
 <div>
-  {{bloggers | json }}
+  <pre>
+    {{blogger | json}}
+  </pre>
+  <pre>
+    {{bloggers | json}}
+  </pre>
 </div>
 
 
