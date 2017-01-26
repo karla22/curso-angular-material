@@ -15,7 +15,7 @@
           <md-input [(ngModel)]="blogger.name" name="name" placeholder="Name"></md-input>
           <md-input [(ngModel)]="blogger.username" name="blogger" placeholder="Username"></md-input>
           <md-input [(ngModel)]="blogger.email" name="email" placeholder="Email"></md-input>
-          <md-input [(ngModel)]="blogger.profilePicture" name="profilePicture" placeholder="Profile Picture URL"></md-input>
+          <md-input [(ngModel)]="blogger.profilePictureURL" name="profilePicture" placeholder="Profile Picture URL"></md-input>
           <md-radio-group>
             <md-radio-button value="male">Male</md-radio-button>
             <md-radio-button value="female">Female</md-radio-button>
@@ -35,8 +35,15 @@
 <div>
   <md-card *ngFor="let blogger of bloggers">
     <md-card-header>
-      <div md-card-avatar class="example-header-image">
+      <div *ngIf="blogger.profilePictureURL" md-card-avatar
+        [style.background-image]="getImageURL(blogger.profilePictureURL)"
+        [style.background-size]="'cover'">
       </div>
+      
+      <div *ngIf="!blogger.profilePictureURL" md-card-avatar
+            class="example-header-image">
+      </div>
+
       <md-card-title>{{blogger.name}}</md-card-title>
       <md-card-subtitle>{{blogger.username}}</md-card-subtitle>
     </md-card-header>

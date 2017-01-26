@@ -6,6 +6,7 @@ export const BLOGGERS: Blogger[] = [
         name: 'Roberto Perez',
         username: 'roberto.perez',
         email: 'roberto@perez.com',
+        profilePictureURL: 'http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg',
         topics:[],
         posts:[
             {
@@ -21,6 +22,7 @@ export const BLOGGERS: Blogger[] = [
         name: 'Karen Lopez',
         username: 'karen.lopez',
         email: 'karen@lopez.com',
+        profilePictureURL: 'http://whatsappdp.net/wp-content/uploads/2016/03/funny-profile-pictures.jpg',
         topics:[],
         posts:[]
     }

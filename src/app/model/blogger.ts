@@ -3,6 +3,7 @@ export class Blogger {
     name: string;
     username: string;
     email: string;
+    profilePictureURL: string;
     topics: string[];
     posts: Post[];
 }

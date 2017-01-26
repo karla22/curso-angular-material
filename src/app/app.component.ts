@@ -32,4 +32,10 @@ export class AppComponent implements OnInit {
     this.blogger = new Blogger();
     this.blogger.posts = [];
   }
+
+  getImageURL(url: string): string {
+    // Returns: 'url(http://eadb.org/wp-content/uploads/2015/08/profile-placeholder.jpg)'
+    // return 'url(' + url + ')';
+    return `url(${url})`;
+  }
 }
