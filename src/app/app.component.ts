@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
   constructor(private bloggerService: BloggerService){}
 
   ngOnInit(): void {
-    this.bloggers = this.bloggerService.getBloggers();
+    this.bloggerService.getBloggers()
+        .then(bloggers => this.bloggers = bloggers);
     this.initBlogger();
   }
 
@@ -31,6 +32,10 @@ export class AppComponent implements OnInit {
   delete(b: Blogger): void {
     //ES6 style
     this.bloggers = this.bloggers.filter(x => x.id !== b.id);
+
+    //Alternativas Array.filter:
+      // Underscore
+      // Lodash
 
     // ES5 style
     // this.bloggers = this.bloggers.filter(function(x: Blogger){

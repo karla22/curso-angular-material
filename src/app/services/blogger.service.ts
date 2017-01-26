@@ -4,8 +4,8 @@ import { BLOGGERS } from '../model/mock-bloggers';
 
 @Injectable()
 export class BloggerService {
-    getBloggers(): Blogger[] {
-        return BLOGGERS;
+    getBloggers(): Promise<Blogger[]> {
+        return Promise.resolve(BLOGGERS);
     }
 
     constructor() { }
