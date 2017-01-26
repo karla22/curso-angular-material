@@ -1,0 +1,46 @@
+{
+  "bloggers": [
+    {
+      "id": 1,
+      "name": "Roberto Perez",
+      "username": "roberto.perez",
+      "email": "roberto@perez.com",
+      "profilePictureURL": "http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg",
+      "topics": [],
+      "posts": [
+        {
+          "userId": 1,
+          "id": 1,
+          "title": "FirstPost",
+          "body": "This is the content of first post"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Karen Lopez",
+      "username": "karen.lopez",
+      "email": "karen@lopez.com",
+      "profilePictureURL": "http://whatsappdp.net/wp-content/uploads/2016/03/funny-profile-pictures.jpg",
+      "topics": [],
+      "posts": []
+    },
+    {
+      "id": 3,
+      "name": "Rodrigo Ramirez",
+      "username": "rodri.ramirez",
+      "email": "rodrigo@ramirez.com",
+      "profilePictureURL": "https://s-media-cache-ak0.pinimg.com/736x/7f/a7/a3/7fa7a3a7e9d5562072a87399f814a0e8.jpg",
+      "topics": [],
+      "posts": []
+    }
+  ],
+  "posts": [
+    {
+      "bloggerId": 1,
+      "id": 1,
+      "title": "FirstPost",
+      "body": "This is the content of first post"
+    }
+  ]
+}
