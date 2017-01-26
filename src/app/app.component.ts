@@ -28,6 +28,16 @@ export class AppComponent implements OnInit {
     this.initBlogger();
   }
 
+  delete(b: Blogger): void {
+    //ES6 style
+    this.bloggers = this.bloggers.filter(x => x.id !== b.id);
+
+    // ES5 style
+    // this.bloggers = this.bloggers.filter(function(x: Blogger){
+    //     return x.id !== b.id;
+    // });
+  }
+
   private initBlogger(): void {
     this.blogger = new Blogger();
     this.blogger.posts = [];
