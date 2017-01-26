@@ -33,16 +33,16 @@
 </div>
 
 <div>
-  <md-card>
+  <md-card *ngFor="let blogger of bloggers">
     <md-card-header>
       <div md-card-avatar class="example-header-image">
       </div>
-      <md-card-title>Nombre</md-card-title>
-      <md-card-subtitle>Username</md-card-subtitle>
+      <md-card-title>{{blogger.name}}</md-card-title>
+      <md-card-subtitle>{{blogger.username}}</md-card-subtitle>
     </md-card-header>
     
-    <md-card-content>
-      Contenido
+    <md-card-content *ngIf="blogger.posts.length !== 0" >
+      {{blogger.posts[0].body}}
     </md-card-content>
     
     <md-card-actions align="end">

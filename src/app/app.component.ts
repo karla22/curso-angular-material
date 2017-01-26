@@ -20,11 +20,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.blogger = new Blogger();
+    this.blogger.posts = [];
     this.bloggers = this.bloggerService.getBloggers();
   }
 
   addBlogger(b: Blogger): void {
     this.bloggers.push(b);
     this.blogger = new Blogger();
+    this.blogger.posts = [];
   }
 }

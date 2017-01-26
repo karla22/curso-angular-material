@@ -7,7 +7,14 @@ export const BLOGGERS: Blogger[] = [
         username: 'roberto.perez',
         email: 'roberto@perez.com',
         topics:[],
-        posts:[]
+        posts:[
+            {
+                userId: 1,
+                id: 1,
+                title: 'First Post',
+                body: 'This is the content of first post'
+            }
+        ]
     },
     {
         id: 2,
