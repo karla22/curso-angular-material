@@ -19,8 +19,13 @@ export class AppComponent implements OnInit {
   constructor(private bloggerService: BloggerService){}
 
   ngOnInit(): void {
+    // this.bloggerService.getBloggers()
+    //     .then(bloggers => this.bloggers = bloggers);
     this.bloggerService.getBloggers()
-        .then(bloggers => this.bloggers = bloggers);
+        .subscribe((result: Blogger[]) => {
+          this.bloggers = result;
+        });
+
     this.initBlogger();
   }
 
