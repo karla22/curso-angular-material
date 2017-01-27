@@ -24,6 +24,8 @@ export class AppComponent implements OnInit {
     this.bloggerService.getBloggers()
         .subscribe((result: Blogger[]) => {
           this.bloggers = result;
+        }, (error: any) => {
+          console.log('Error in getBloggers function');
         });
 
     this.initBlogger();
