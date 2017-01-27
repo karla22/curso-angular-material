@@ -35,8 +35,10 @@ export class AppComponent implements OnInit {
   }
 
   delete(b: Blogger): void {
-    //ES6 style
-    this.bloggers = this.bloggers.filter(x => x.id !== b.id);
+    this.bloggerService.deleteBlogger(b)
+        .subscribe(() => {
+          this.bloggers = this.bloggers.filter(x => x.id !== b.id);
+        });
 
     //Alternativas Array.filter:
       // Underscore

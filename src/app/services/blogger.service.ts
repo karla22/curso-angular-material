@@ -20,4 +20,10 @@ export class BloggerService {
         return this.http.get(BLOGGER_API)
                         .map((response: Response) => response.json());
     }
+
+    deleteBlogger(blogger: Blogger): Observable<Blogger> {
+        // Call to: http://localhost:3000/bloggers/1
+        return this.http.delete(`${BLOGGER_API}/${blogger.id}`)
+                        .map((response: Response) => response.json());
+    }
 }
