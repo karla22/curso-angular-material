@@ -10,8 +10,6 @@ import { BloggerService } from './services/blogger.service';
 })
 export class AppComponent implements OnInit {
   showForm: boolean = false;
-  // Array Model
-  bloggers: Blogger[];
   // Object Model -> Used in "Register Form"
   blogger: Blogger;
   
@@ -19,47 +17,16 @@ export class AppComponent implements OnInit {
   constructor(private bloggerService: BloggerService){}
 
   ngOnInit(): void {
-    // this.bloggerService.getBloggers()
-    //     .then(bloggers => this.bloggers = bloggers);
-    this.bloggerService.getBloggers()
-        .subscribe((result: Blogger[]) => {
-          this.bloggers = result;
-        }, (error: any) => {
-          console.log('Error in getBloggers function');
-        });
-
     this.initBlogger();
   }
 
   addBlogger(b: Blogger): void {
-    this.bloggers.push(b);
+    // this.bloggers.push(b);
     this.initBlogger();
-  }
-
-  delete(b: Blogger): void {
-    this.bloggerService.deleteBlogger(b)
-        .subscribe(() => {
-          this.bloggers = this.bloggers.filter(x => x.id !== b.id);
-        });
-
-    //Alternativas Array.filter:
-      // Underscore
-      // Lodash
-
-    // ES5 style
-    // this.bloggers = this.bloggers.filter(function(x: Blogger){
-    //     return x.id !== b.id;
-    // });
   }
 
   private initBlogger(): void {
     this.blogger = new Blogger();
     this.blogger.posts = [];
-  }
-
-  getImageURL(url: string): string {
-    // Returns: 'url(http://eadb.org/wp-content/uploads/2015/08/profile-placeholder.jpg)'
-    // return 'url(' + url + ')';
-    return `url(${url})`;
   }
 }

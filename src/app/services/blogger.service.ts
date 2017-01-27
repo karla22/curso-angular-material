@@ -9,7 +9,7 @@ import 'rxjs/add/observable/throw';
 import { Blogger } from '../model/blogger';
 // import { BLOGGERS } from '../model/mock-bloggers';
 
-const BLOGGER_API: string = 'http://localhost:3000/bloggerss';
+const BLOGGER_API: string = 'http://localhost:3000/bloggers';
 
 @Injectable()
 export class BloggerService {
