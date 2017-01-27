@@ -1,0 +1,46 @@
+<div>
+  <md-card *ngFor="let blogger of bloggers">
+    <md-card-header>
+      <div *ngIf="blogger.profilePictureURL" md-card-avatar
+        [style.background-image]="getImageURL(blogger.profilePictureURL)"
+        [style.background-size]="'cover'">
+      </div>
+      
+      <div *ngIf="!blogger.profilePictureURL" md-card-avatar
+            class="example-header-image">
+      </div>
+
+      <button md-icon-button [mdMenuTriggerFor]="menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+      <md-menu #menu>
+        <button md-menu-item>
+          <md-icon>edit</md-icon>
+          <span>Edit</span>
+        </button>
+        <button md-menu-item (click)="delete(blogger)">
+          <md-icon>delete</md-icon>
+          <span>Delete</span>
+        </button>
+      </md-menu>
+
+      <md-card-title>{{blogger.name}}</md-card-title>
+      <md-card-subtitle>{{blogger.username}}</md-card-subtitle>
+    </md-card-header>
+    
+    <md-card-content *ngIf="blogger.posts.length !== 0" >
+      {{blogger.posts[0].body}}
+    </md-card-content>
+    
+    <md-card-actions align="end">
+      <button md-button color="primary">Like</button>
+      <button md-button color="primary">Share</button>
+    </md-card-actions>
+  </md-card>
+</div>
+
+<div>
+  <pre>
+    {{bloggers | json}}
+  </pre>
+</div>
